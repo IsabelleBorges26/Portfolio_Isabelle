@@ -1,0 +1,437 @@
+.projects {
+
+  padding: var(--section-padding);
+
+  background: var(--dark-deep);
+
+  min-height: 100vh;
+
+}
+
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.projects-title {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  margin-bottom: 0;
+}
+
+.projects-title .highlight {
+
+  color: var(--neon-pink);
+
+  text-shadow: 4px 4px 0 var(--dark-deep), 6px 6px 0 var(--neon-lime);
+
+}
+
+.projects-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.project-card {
+
+  background: var(--dark-surface);
+
+  border: 2px solid var(--border-medium);
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  cursor: pointer;
+
+  transition: all 0.5s var(--ease-out);
+
+}
+
+.project-card:hover {
+
+  border-color: var(--neon-lime);
+
+}
+
+.project-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.project-meta {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-family: var(--mono);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-muted);
+
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+
+}
+
+.project-client {
+
+  color: var(--neon-lime);
+
+}
+
+.project-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  transition: margin 0.5s;
+  text-align: left;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out);
+  text-align: left;
+}
+
+.tech-stack {
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+}
+
+.tech-pill {
+
+  padding: 6px 16px;
+
+  border: 1px solid var(--border-strong);
+
+  border-radius: 50px;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  color: var(--text-secondary);
+
+}
+
+.project-visual-wrapper {
+
+  height: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transition: all 0.5s var(--ease-out);
+
+  padding: 0 40px;
+
+}
+
+.project-visual {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 400px;
+
+  border-radius: 12px;
+
+  border: 2px solid var(--border-medium);
+
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+}
+
+/* =========================================================
+   EXPANDED STATE
+   ========================================================= */
+
+.project-card.expanded {
+
+  background: var(--dark-card);
+
+  border-color: var(--neon-lime);
+
+  box-shadow: var(--shadow-brutal);
+
+}
+
+.project-card.expanded .project-details {
+
+  opacity: 1;
+
+  height: 50px;
+
+  margin-bottom: 30px;
+
+}
+
+.project-card.expanded .project-visual-wrapper {
+
+  height: 440px;
+
+  opacity: 1;
+
+  padding-bottom: 40px;
+
+}
+
+/* =========================================================
+   REPOSITÓRIOS FLUTTER
+   ========================================================= */
+
+.repositories-section {
+
+  margin-top: 140px;
+
+}
+
+.repositories-section .projects-header {
+
+  margin-bottom: 40px;
+
+}
+
+.repositories-section .section-label {
+
+  color: var(--neon-lime);
+
+}
+
+.repositories-section .section-title {
+
+  font-size: clamp(3rem, 7vw, 7rem);
+
+  margin-bottom: 60px;
+
+}
+
+.repositories-section .highlight {
+
+  color: var(--neon-pink);
+
+  text-shadow: 4px 4px 0 var(--dark-deep), 6px 6px 0 var(--neon-lime);
+
+}
+
+.repositories-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+}
+
+.repository-card {
+
+  background: var(--dark-surface);
+
+  border: 2px solid var(--border-medium);
+
+  padding: 36px;
+
+  min-height: 240px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition: all 0.4s var(--ease-out);
+
+}
+
+.repository-card:hover {
+
+  border-color: var(--neon-lime);
+
+  background: var(--dark-card);
+
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-brutal);
+
+}
+
+.repository-info {
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+}
+
+.repository-info h3 {
+
+  font-family: var(--serif);
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 400;
+
+  color: var(--text-primary);
+
+  margin: 0 0 20px;
+
+}
+
+.repository-info p {
+
+  color: var(--text-secondary);
+
+  font-family: var(--sans);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  margin: 0 0 30px;
+
+  max-width: 650px;
+
+}
+
+.repository-info .btn-outline {
+
+  align-self: flex-start;
+
+  margin-top: auto;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .project-info {
+
+    padding: 24px;
+
+  }
+
+  .project-details {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+  }
+
+  .project-card.expanded .project-details {
+
+    height: auto;
+
+  }
+
+  .project-visual-wrapper {
+
+    padding: 0 24px;
+
+  }
+
+  .project-card.expanded .project-visual-wrapper {
+
+    height: 300px;
+
+    padding-bottom: 24px;
+
+  }
+
+  .project-visual {
+
+    min-height: 276px;
+
+  }
+
+  /* Repositórios Flutter */
+
+  .repositories-section {
+
+    margin-top: 90px;
+
+  }
+
+  .repositories-section .section-title {
+
+    margin-bottom: 40px;
+
+  }
+
+  .repositories-list {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+  }
+
+  .repository-card {
+
+    padding: 28px 24px;
+
+    min-height: 220px;
+
+  }
+
+  .repository-info h3 {
+
+    font-size: 2rem;
+
+  }
+
+  .repository-info p {
+
+    font-size: 0.9rem;
+
+  }
+
+}

@@ -1,0 +1,112 @@
+.services {
+  padding: var(--section-padding);
+  background: var(--dark-deep);
+  position: relative;
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.services-title {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  margin-bottom: 60px;
+}
+
+.services-title .highlight {
+  color: var(--neon-lime);
+  text-shadow: 4px 4px 0 var(--dark-deep), 6px 6px 0 var(--neon-pink);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  align-items: center;
+  padding: 40px;
+  background: var(--dark-surface);
+  border: 2px solid var(--border-medium);
+  transition: all 0.4s var(--ease-out);
+  cursor: crosshair;
+}
+
+.service-item:hover {
+  background: var(--neon-lime);
+  border-color: var(--neon-lime);
+  transform: translateX(10px);
+  box-shadow: -10px 10px 0 var(--neon-pink);
+}
+
+.service-num {
+  font-family: var(--mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: color 0.4s;
+}
+
+.service-text h3 {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: color 0.4s;
+}
+
+.service-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  transition: color 0.4s;
+}
+
+.service-arrow {
+  font-size: 2.5rem;
+  color: var(--text-muted);
+  text-align: right;
+  transition: all 0.4s;
+}
+
+/* Hover States within item */
+.service-item:hover .service-num,
+.service-item:hover .service-text h3 {
+  color: var(--dark-deep);
+}
+
+.service-item:hover .service-text p {
+  color: rgba(20, 27, 34, 0.7);
+}
+
+.service-item:hover .service-arrow {
+  color: var(--dark-deep);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    grid-template-columns: 60px 1fr;
+    padding: 24px;
+    gap: 16px;
+  }
+  
+  .service-arrow {
+    display: none;
+  }
+  
+  .service-num {
+    font-size: 1.5rem;
+  }
+  
+  .service-text h3 {
+    font-size: 1.8rem;
+  }
+}

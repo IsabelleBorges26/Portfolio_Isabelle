@@ -1,0 +1,251 @@
+/* ===================================================================
+   GLOBAL DESIGN SYSTEM — Neo-Brutalist Dark Theme
+   Isabelle Borges Portfolio
+   =================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+
+/* ── DESIGN TOKENS ── */
+:root {
+  /* — Brand Colors (original) — */
+  --cream: #fff7e6;
+  --pink: #f7c8d3;
+  --rosewood: #b46a72;
+  --sage: #a8b58a;
+  --blue: #a9b7c6;
+  --dark: #2d3a47;
+
+  /* — Extended Neo-Brutalist Palette — */
+  --dark-deep: #141b22;
+  --dark-mid: #1a242e;
+  --dark-surface: #212d38;
+  --dark-card: #432720; /* Truffle */
+
+  /* Neon accents derived from brand */
+  --neon-lime: #da6c81; /* Grapefruit */
+  --neon-lime-dim: rgba(218, 108, 129, 0.15);
+  --neon-pink: #bf2b54; /* Raspberry */
+  --neon-rosewood: #bf2b54;
+
+  /* — Glass & Overlay — */
+  --glass-bg: rgba(26, 36, 46, 0.75);
+  --glass-border: rgba(255, 247, 230, 0.08);
+  --overlay-light: rgba(255, 247, 230, 0.04);
+  --overlay-lighter: rgba(255, 247, 230, 0.08);
+
+  /* — Text — */
+  --text-primary: #f5e9d0; /* Vanilla */
+  --text-secondary: rgba(245, 233, 208, 0.7);
+  --text-muted: rgba(245, 233, 208, 0.45);
+
+  /* — Borders — */
+  --border-subtle: rgba(255, 247, 230, 0.1);
+  --border-medium: rgba(255, 247, 230, 0.18);
+  --border-strong: rgba(255, 247, 230, 0.3);
+
+  /* — Neo-Brutalist Shadows — */
+  --shadow-brutal: 6px 6px 0 rgba(218, 108, 129, 0.25);
+  --shadow-brutal-lg: 10px 10px 0 rgba(218, 108, 129, 0.2);
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 40px rgba(218, 108, 129, 0.12);
+
+  /* — Typography — */
+  --serif: "DM Serif Display", serif;
+  --sans: "Manrope", sans-serif;
+  --mono: "Space Mono", monospace;
+
+  /* — Spacing — */
+  --section-padding: 120px 6vw 80px;
+  --section-padding-mobile: 90px 5vw 60px;
+
+  /* — Transitions — */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── RESET & BASE ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--dark-deep);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out);
+}
+
+button {
+  font-family: var(--sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── SELECTION ── */
+::selection {
+  background: var(--neon-lime);
+  color: var(--dark-deep);
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-surface);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-lime);
+}
+
+/* ── UTILITY CLASSES ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-medium);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--neon-lime);
+}
+
+.section-label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--neon-lime);
+  border-radius: 50%;
+}
+
+.section-number {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+/* ── NEO-BRUTALIST BUTTON ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--neon-lime);
+  color: var(--dark-deep);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid var(--neon-lime);
+  border-radius: 50px;
+  box-shadow: var(--shadow-brutal);
+  transition: all 0.35s var(--ease-out);
+}
+
+.btn-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 rgba(218, 108, 129, 0.35);
+}
+
+.btn-primary:active {
+  transform: translate(0, 0);
+  box-shadow: 3px 3px 0 rgba(218, 108, 129, 0.25);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--dark-card); /* Truffle bg for secondary buttons */
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--neon-pink); /* Sage Green border */
+  border-radius: 50px;
+  transition: all 0.35s var(--ease-out);
+}
+
+.btn-outline:hover {
+  border-color: var(--neon-lime);
+  color: var(--neon-lime);
+  transform: translateY(-2px);
+}
+
+/* ── GRID LINES BACKGROUND ── */
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--overlay-light) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      var(--overlay-light) 1px,
+      transparent 1px
+    );
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── RESPONSIVE HELPERS ── */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px 5vw 50px;
+  }
+}

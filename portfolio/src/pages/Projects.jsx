@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
   {
-    id: "01",
     title: "ENTRELINHAS",
     client:
       "Plataforma para vestibulandos que utiliza inteligência artificial para auxiliar na construção de redações, sugerindo argumentos, repertórios e ideias a partir do tema e das referências escolhidas pelo usuário.",
@@ -30,7 +29,6 @@ const projectsData = [
     src: "/1.png"
   },
   {
-    id: "02",
     title: "MAGIC PLAY",
     client:
       "Jogo interativo inspirado em Pedra, Papel e Tesoura, desenvolvido em parceria, com uma proposta diferente e uma experiência mais dinâmica e divertida.",
@@ -46,7 +44,6 @@ const projectsData = [
     src: "/2.png"
   },
   {
-    id: "03",
     title: "ALBUM DA COPA",
     client:
       "Álbum virtual inspirado em coleções de figurinhas da Copa, permitindo cadastrar jogadores e organizar a coleção de forma interativa.",
@@ -63,7 +60,7 @@ const projectsData = [
     src: "/3.png"
   },
   {
-    id: "04",
+
     title: "CADERNO DE RESUMOS",
     client:
       "Plataforma criada para organizar meus estudos, reunindo resumos e conteúdos das provas da semana em um único espaço digital.",
@@ -78,7 +75,7 @@ const projectsData = [
     src: "/4.png"
   },
   {
-    id: "05",
+
     title: "DISNEY MOVIES",
     client:
       "Sistema inspirado em uma locadora de filmes, desenvolvido para realizar o cadastro e o gerenciamento de títulos de forma digital.",
@@ -96,7 +93,7 @@ const projectsData = [
     src: "/5.png"
   },
   {
-    id: "06",
+
     title: "SIMULADOR DE ULTRASSOM",
     client:
       "Simulador educativo desenvolvido em grupo para representar, de forma interativa, o funcionamento de um exame de ultrassom em uma gestante.",
@@ -111,7 +108,7 @@ const projectsData = [
     src: "/6.png"
   },
   {
-    id: "07",
+
     title: "DAILY CHECK",
     client:
       "Aplicação desenvolvida como avaliação no SENAI, integrando uma API para identificar a temperatura do ambiente e um sistema para registrar e acompanhar tarefas.",
